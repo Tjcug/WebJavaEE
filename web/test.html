@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>My FTL starting page</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!--新 Bootstrap时间选择器的 CSS 文件-->
+    <link href="libs/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <!---新 Bootstrap树形控件的 CSS 文件-->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-treeview.min.css"/>
+
+</head>
+
+<body>
+This is my JSP page. <br>
+<div id="tree"></div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="libs/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<!---新 Bootstrap树形控件的 JavaScript 文件-->
+<script src="libs/bootstrap/js/bootstrap-treeview.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        alert("tt");
+        $('#tree').treeview({
+            data: getTree(),
+            levels: 5,
+        });
+    });
+
+    function getTree() {
+        // Some logic to retrieve, or generate tree structure
+        var data = [
+            {
+                text: "Parent 1",
+                nodes: [
+                    {
+                        text: "Child 1",
+                        nodes: [
+                            {
+                                text: "Grandchild 1"
+                            },
+                            {
+                                text: "Grandchild 2"
+                            }
+                        ]
+                    },
+                    {
+                        text: "Child 2"
+                    }
+                ]
+            },
+            {
+                text: "Parent 2"
+            },
+            {
+                text: "Parent 3"
+            },
+            {
+                text: "Parent 4"
+            },
+            {
+                text: "Parent 5"
+            }
+        ];
+        return data;
+    }
+</script>
+</body>
+</html>

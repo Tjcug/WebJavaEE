@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Category value="Earthquake">
+    <SubCategory value="EarthquakeReport">
+        <SecondCategory value="Earthquake">
+            <keywords>Earthquake</keywords>
+            <keywords>Shake</keywords>
+        </SecondCategory>
+        <SecondCategory value="Shake">
+            <keywords>Earthquake</keywords>
+            <keywords>Shake</keywords>
+        </SecondCategory>
+    </SubCategory>
+    <SubCategory value="EarthquakeRelife">
+        <SecondCategory value="FoodAndWater">
+            <keywords>Earthquake</keywords>
+            <keywords>Shake</keywords>
+        </SecondCategory>
+        <SecondCategory value="Shelter">
+            <keywords>Shelter</keywords>
+            <keywords>House</keywords>
+        </SecondCategory>
+    </SubCategory>
+</Category>

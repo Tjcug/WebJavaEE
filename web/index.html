@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>My FTL starting page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+
+    <!--新 Bootstrap时间选择器的 CSS 文件-->
+    <link href="libs/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+    <!---新 Bootstrap树形控件的 CSS 文件-->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-treeview.min.css"/>
+
+    <style type="text/css">
+        .center {
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #keywords{
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <legend>Select Arearang</legend>
+            <div class="row">
+                <div class="col-md-6" >
+                        <div class="row">
+                            <div class="col-md-4" >
+                               <div class="text-center" style="margin-top: 60px;"><label>Selectplace</label></div>
+                            </div>
+                            <div class="col-md-8" >
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>China</option>
+                                        <option>English</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>湖北省</option>
+                                        <option>湖南省</option>
+                                        <option>上海市</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>常德市</option>
+                                        <option>武汉市</option>
+                                        <option>北京市</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+            <div class="col-md-6">
+                <div class="col-md-4" >
+                    <div class="text-center" style="margin-top: 60px;"><label>SelectBBox</label></div>
+                </div>
+                <div class="col-md-8" >
+                    <div class="center">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="upbtn">上</span>
+                            <input type="text" class="form-control" placeholder="UP" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <br/>
+                    <div>
+                            <div class="input-group input-group-sm" >
+                                <span class="input-group-addon" id="leftbtn">左</span>
+                                <input type="text" class="form-control" placeholder="LEFT" aria-describedby="basic-addon1">
+                                <span class="input-group-addon" id="rightbtn">右</span>
+                                <input type="text" class="form-control" placeholder="RIGHT" aria-describedby="basic-addon1">
+                            </div>
+                    </div>
+                    <br/>
+                    <div class="center">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="downbtn">上</span>
+                            <input type="text" class="form-control" placeholder="DOWN" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <br/>
+
+    <!--下面是第二个板块为起始时间选择板块-->
+    <legend> start time end time</legend>
+    <div class="row">
+        <div class="col-md-12 container">
+                <div class="form-group">
+                    <label for="startTime" class="col-md-2 control-label">DateTime Picking</label>
+                    <div class="input-group date form_datetime col-md-5" data-date="2016-05-31T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="startTime">
+                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <input type="hidden" id="startTime" value="" /><br/>
+                </div>
+                <div class="form-group">
+                    <label for="endTime" class="col-md-2 control-label">DateTime Picking</label>
+                    <div class="input-group date form_datetime col-md-5" data-date="2016-05-31T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="endTime">
+                        <input class="form-control" size="16" type="text" value="" readonly>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <input type="hidden" id="endTime" value="" /><br/>
+                </div>
+        </div>
+    </div>
+
+    <br/>
+    <!--下面是第三个板块为控件树结构选择模块-->
+    <legend>Select keywords</legend>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="center" id="keywords">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="selectKeyWords">SelectKeyWords</span>
+                        <select class="form-control">
+                            <option>Top keywords----Earthquake</option>
+                            <option>Top keywords----SchoolInfo</option>
+                        </select>
+                </div>
+                <br/><br/><br/>
+                <button type="button" class="btn btn-info">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-info" data-toggle="modal"
+                        data-target="#myModal" style="margin-left: 100px;">Add</button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div id="treeControl"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width: 1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myLargeModalLabel">
+                    New KeyWords
+                </h4>
+            </div>
+            <div class="modal-body">
+                <!--定义一个输入框-->
+                <legend>Add a Hierachical Keyword List</legend>
+                <div class="input-group">
+                    <textarea id="keywordsTextArea" class="form-control" name="a" style="width:550px;height:500px;">
+
+                    </textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="libs/jquery/jquery-2.0.0.min.js" charset="UTF-8"></script>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="js/head.js" charset="UTF-8"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+<!--&lt;!&ndash; 最新的 Bootstrap 核心 JavaScript 文件 &ndash;&gt;-->
+<!--<script src="libs/bootstrap/js/bootstrap-modal.js"></script>-->
+
+<!--Bootstrap时间选择器的js文件-->
+<script type="text/javascript" src="/libs/bootstrap/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/libs/bootstrap/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+
+<!---新 Bootstrap树形控件的 JavaScript 文件-->
+<script src="libs/bootstrap/js/bootstrap-treeview.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('#treeControl').treeview({
+            data: getTree(),
+            levels: 5,
+        });
+        var TextAreaValue="<Category:Earthquake>\n"
+        $("#keywordsTextArea").html(TextAreaValue);
+    });
+
+    $('.form_datetime').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    function getTree() {
+        var xml = $.loadXML("data/KeyWordsTemplate.xml");
+        var obj = $(xml).toObject().get(0);
+        console.info(obj);
+//        alert(obj.value);
+//        alert(obj.SubCategory[0].SecondCategory[0]);
+        var data=[];
+        var datanode={};
+        datanode.text=obj.value;
+        datanode.icon= "glyphicon glyphicon-star";
+        var rootnodes=[];
+        for(var i=0;i<obj.SubCategory.length;i++){
+            var SubCategory=obj.SubCategory[i];
+            var node={};
+            node.text=SubCategory.value;
+            var subnodes=[];
+            for(var j=0;j<SubCategory.SecondCategory.length;j++){
+                var SecondCategory=SubCategory.SecondCategory[j];
+                var temp={};
+                var tempnodes=[];
+                for(var z=0;z<SecondCategory.keywords.length;z++){
+                    var kewords=SecondCategory.keywords[z];
+                    var key={};
+                    key.text=kewords;
+                    tempnodes.push(key);
+                }
+                temp.text=SecondCategory.value;
+                temp.nodes=tempnodes;
+                subnodes.push(temp);
+            }
+            node.nodes=subnodes;
+            rootnodes.push(node);
+        }
+
+        datanode.nodes=rootnodes;
+        data.push(datanode);
+        console.info(data);
+//        var data = [
+//            {
+//                text: "Parent 1",
+//                icon: "glyphicon glyphicon-star",
+//                color: "#000000",
+//                nodes: [
+//                    {
+//                        text: "Child 1",
+//                        nodes: [
+//                            {
+//                                text: "Grandchild 1"
+//                            },
+//                            {
+//                                text: "Grandchild 2"
+//                            }
+//                        ]
+//                    },
+//                    {
+//                        text: "Child 2"
+//                    }
+//                ]
+//            }
+//        ];
+        return data;
+    }
+</script>
+</body>
+</html>
