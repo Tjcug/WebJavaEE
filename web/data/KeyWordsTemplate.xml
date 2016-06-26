@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Category value="Earthquake">
     <SubCategory value="EarthquakeReport">
-        <SecondCategory value="Earthquake">
-            <keywords>Earthquake</keywords>
-            <keywords>Shake</keywords>
-        </SecondCategory>
-        <SecondCategory value="Shake">
-            <keywords>Earthquake</keywords>
-            <keywords>Shake</keywords>
-        </SecondCategory>
+        <SubCategory value="Earthquake">
+            <SubCategory value="abc">
+                <keywords></keywords>
+            </SubCategory>
+            <SubCategory value="efg">
+                <keywords></keywords>
+        </SubCategory>
+        </SubCategory>
+        <SubCategory value="Shake">
+            <SubCategory value="Shake">
+                <keywords></keywords>
+            </SubCategory>
+            <SubCategory value="Shake">
+                <keywords></keywords>
+            </SubCategory>
+        </SubCategory>
     </SubCategory>
     <SubCategory value="EarthquakeRelife">
-        <SecondCategory value="FoodAndWater">
-            <keywords>Earthquake</keywords>
-            <keywords>Shake</keywords>
-        </SecondCategory>
-        <SecondCategory value="Shelter">
-            <keywords>Shelter</keywords>
-            <keywords>House</keywords>
-        </SecondCategory>
+        <SubCategory value="FoodAndWater">
+            <SubCategory value="Earthquake">
+                <keywords></keywords>
+            </SubCategory>
+            <SubCategory value="Shake">
+                <keywords></keywords>
+            </SubCategory>
+        </SubCategory>
+        <SubCategory value="Shelter">
+            <SubCategory value="Shelter">
+                <keywords></keywords>
+            </SubCategory>
+            <SubCategory value="House">
+                <keywords></keywords>
+            </SubCategory>
+        </SubCategory>
     </SubCategory>
 </Category>

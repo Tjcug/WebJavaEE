@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Treed | Powerful Tree Editor</title>
+    <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    </style>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../libs/jquery/jquery-2.0.0.min.js" charset="UTF-8"></script>
+    <script src="../js/head.js" charset="UTF-8"></script>
+
+    <link rel="stylesheet" href="d3/build/build.css">
+    <link rel="stylesheet" href="d3/index.css">
+    <script type="text/javascript">
+      alert("xxx");
+      function initData(){
+        var xml = $.loadXML("../data/KeyWordsTemplate.xml");
+        var obj = $(xml).toObject().get(0);
+        console.info(obj);
+        var data={};
+
+        var node={};
+        node.content=obj.value;
+        getData(obj,node);
+        console.info(node);
+        return node;
+      };
+
+      function getData(child,root){
+        if(child['SubCategory']==undefined){
+          return;
+        }
+        var subcategory=child['SubCategory'];
+        var childs=[];
+        for(var i=0;i<subcategory.length;i++){
+          var category=subcategory[i];
+          var child={
+            "name":category.value,
+            "collapsed":true
+          };
+          getData(category,child);
+          childs.push(child);
+        }
+        root.children=childs;
+      }
+
+      var flare_data=initData();
+      var demoData=initData();
+    </script>
+  </head>
+  <body>
+  
+      <div id="example">
+        <div id="editme"></div>
+        <div id="d3view"></div>
+      </div>
+
+    <script src="d3/d3.v3.min.js"></script>
+    <script src="d3/demo-bundle.js"></script>
+    <script src="d3/marked.js"></script>
+
+    <!--<script src="d3/demo-data.js"></script>-->
+    <!--<script src="d3/flare-data.js"></script>-->
+
+    <script src="d3/setup.js"></script>
+
+  </body>
+</html>
+
